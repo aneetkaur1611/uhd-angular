@@ -1,0 +1,84 @@
+@import "../../variable.scss";
+
+.home-banner {
+  position: relative;
+  .carousel-item {
+    min-height: 55rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .content-box {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: $textPrimary, $alpha: 0.6);
+      color: #fff;
+      font-size: 4rem;
+      padding: 2rem 0;
+      line-height: 1.2;
+      @media screen and (max-width:767px) {
+          font-size: 3rem;
+      }
+      .textbox{
+        max-width: 70%;
+        @media screen and (max-width:991px) {
+         max-width: 100%;
+      }
+      }
+    }
+  }
+  .form-col{
+    position: absolute;
+    right: 0;
+    top: 2rem;
+ 
+    left: 50%;
+    @media screen and (max-width:991px) {
+     position: static;
+     margin-top: 3rem;
+  }
+  }
+}
+
+.home-tab-sec{
+  .tab-content{
+    position: relative;
+  }
+  .fade {
+    opacity: 0;
+    transition: opacity .2s cubic-bezier(.42, 0, .34, 1.01); 
+    &:not(.active) {
+      opacity: 0;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+
+.dynamic-content{
+    background-color: #84a4d0;
+    padding: 2rem 0;
+    font-weight: $fontBold;
+    margin-bottom: 5rem;
+}
+.row{
+    .widget-title{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: -5rem;
+            border-left: 2rem solid transparent;
+            border-top: 2rem solid #84a4d0;
+            border-right: 2rem solid transparent;
+            left: 50%;
+            margin-left: -1rem;
+            @media screen and (max-width:767px) {
+                display: none;
+            }
+        }
+    }
+}
+}
