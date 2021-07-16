@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {  faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -10,7 +10,16 @@ import {  faPhone } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   faPhone = faPhone;
-
+  navFixed: boolean = false;
+  private scrollOffset: number = 70;
+  
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.navFixed = (window.pageYOffset 
+      || document.documentElement.scrollTop 
+      || document.body.scrollTop || 0
+    ) > this.scrollOffset;
+  }
   constructor() { }
 
   ngOnInit(): void {

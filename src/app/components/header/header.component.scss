@@ -18,18 +18,24 @@
       }
     }
   }
-.site-logo{
+  .site-logo{
     @media screen and (max-width:767px) {
         max-width: 18rem;
     }
+  
 }
-  .navbar {
-    border-top: 5px solid $textRed;
-    position: sticky;
+&.fixed{
+  .navbar{
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 111;
+  }
+}
+  .navbar {
+    border-top: 5px solid $textRed;
+    
     padding: 0;
     .nav-item {
         position: relative;
