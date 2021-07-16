@@ -1,0 +1,33 @@
+.form-wrapper {
+    max-width: 40rem;
+    margin-left: auto;
+    @media screen and (max-width:991px) {
+       margin-right: auto;
+    }
+    .form-header{
+        font-size: 1.9rem;
+        padding: 1rem 2.5rem;
+    }
+    .form-body{
+        background-color: #8eacd4;
+        padding: 2.5rem 2.5rem 2rem;
+    }
+    .form-control, .custom-select{
+        height: 4.4rem;
+        font-size: 1.7rem;
+        color: #212121;
+    }
+    .btn{
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 1rem 3rem ;
+    }
+    input.ng-touched.ng-invalid{
+        border-color: #c5103d;
+    }
+    .error{
+        line-height: 1.2;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}

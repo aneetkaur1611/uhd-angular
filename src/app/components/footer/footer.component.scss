@@ -1,0 +1,26 @@
+.footer-main {
+align-items: center;
+padding-right: 10rem;
+@media screen and (max-width:767px) {
+  padding-right: 6rem;
+}
+.footer-left{
+    padding:2rem 0
+}
+  .scroll-to-top {
+    background-color: #01224f;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    padding: 1rem 3rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @media screen and (max-width:767px) {
+        top: auto;
+        padding:  2rem;
+    }
+  }
+}

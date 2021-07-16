@@ -1,0 +1,58 @@
+@import "../../../variable.scss";
+
+.site-header {
+  .top-bar {
+    padding: 2rem 0;
+    line-height: 1.2;
+    align-items: center;
+    @media screen and (max-width:767px) {
+        padding: 1rem 0;
+    }
+    .col-right {
+      font-size: 3rem;
+      max-width: 67rem;
+      margin-left: auto;
+      @media screen and (max-width:1024px) {
+        font-size: 2rem;
+      max-width: 50rem;
+      }
+    }
+  }
+.site-logo{
+    @media screen and (max-width:767px) {
+        max-width: 18rem;
+    }
+}
+  .navbar {
+    border-top: 5px solid $textRed;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    padding: 0;
+    .nav-item {
+        position: relative;
+      .nav-link {
+        color: #fff;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+      }
+      &.active {
+        .nav-link {
+          background-color: $textRed;
+        }
+      }
+    }
+    .dropdown-menu{
+        background-color: $textRed;
+        margin: 0;
+        border: 0;
+        .dropdown-item{
+            color: #fff;
+            font-size: 1.4rem;
+        }
+    }
+  }
+}

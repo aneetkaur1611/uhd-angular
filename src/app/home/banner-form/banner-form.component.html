@@ -1,0 +1,51 @@
+<div class="form-wrapper">
+  <div class="bg-primary text-white form-header">
+    <fa-icon [icon]="faInfoCircle"></fa-icon> Request information
+  </div>
+  <div class="form-body">
+    <form [formGroup]="bannerform" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="First Name*" formControlName="firstname" />
+        <div class="text-red error" *ngIf="firstname?.invalid && firstname?.touched">Fist Name is required and use must be atleast 3 characters</div>
+      
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name*"  />
+        <div class="text-red error" *ngIf="lastname?.invalid && lastname?.touched">Last Name is required </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" formControlName="email" placeholder=" Email Address*" />
+        <div class="text-red error" *ngIf="email?.invalid && email?.touched">Email Address is required and must be valid email</div>
+      </div>
+      <div class="form-group">
+        <input type="tel" class="form-control" formControlName="phone" placeholder="Phone Number* " />
+        <div class="text-red error" *ngIf="phone?.invalid && phone?.touched">Phone is required</div>
+      </div>
+      <div class="form-group">
+        <select name="cars" class="custom-select">
+          <option selected>Program of Interest*</option>
+          <option value="interest1">Interest 1</option>
+          <option value="interest2">Interest 2</option>
+          <option value="interest3">Interest 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select name="cars" class="custom-select">
+          <option selected>Program Delivery Type</option>
+          <option value="delivery1">Delivery 1</option>
+          <option value="delivery2">Delivery 2</option>
+          <option value="delivery3">Delivery 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select name="cars" class="custom-select">
+          <option selected>Preferred Communication Type</option>
+          <option value="communication1">Communication 1</option>
+          <option value="communication2">Communication 2</option>
+          <option value="communication3">Communication 3</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-danger btn-block" [disabled]="bannerform.invalid">LEARN MORE TODAY!</button>
+    </form>
+  </div>
+</div>
